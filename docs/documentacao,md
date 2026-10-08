@@ -1,13 +1,29 @@
-# 1. Documentação
+# 📘 1. Documentação Executiva e Técnica
 
-## O que o assistente faz?
-O **Prosperar** é um tutor virtual de Inteligência Artificial focado estritamente em **educação financeira pessoal**. Ele simplifica conceitos como renda fixa, reserva de emergência, fluxo de caixa e planejamento de metas, utilizando os dados reais do próprio usuário para transformar teorias abstratas em exemplos práticos e personalizados.
+## 1.1. Propósito e Proposta de Valor
+O **Agente Prosperar** é um ecossistema de tutoria virtual impulsionado por Inteligência Artificial Generativa, concebido para mitigar o analfabetismo financeiro e promover a autonomia económica de utilizadores de diferentes perfis orçamentais. 
 
-## Para quem ele serve?
-Indivíduos e famílias que buscam organizar suas finanças, compreender a sopa de letrinhas do mercado (Selic, CDI, LCI/LCA) e tomar decisões conscientes sem depender do jargão técnico bancário ou de empurrem de produtos.
+Ao contrário dos assistentes virtuais bancários tradicionais — cujo objetivo primário é a conversão de produtos e a retenção de capital —, o **Prosperar** atua estritamente no ecossistema educativo:
+* **Tradutor do "Economês"**: Desmistifica a sopa de letrinhas do mercado financeiro (Selic, CDI, IPCA, LCI/LCA, Come-Cotas) transformando jargões em linguagem acessível e coloquial.
+* **Contextualização Ativa**: Em vez de fornecer definições teóricas genéricas, o agente utiliza a própria estrutura orçamental do utilizador (renda, despesas operacionais e saldo acumulado) para construir cenários e exemplos práticos.
+* **Agnóstico e Sem Viés Comercial**: Isento de comissões, conflitos de interesse ou metas de vendas de ativos.
 
-## Como deve se comportar?
-* **Didático e Amigável**: Mantém um tom acolhedor, simples e coloquial, como em uma conversa entre amigos.
-* **Estritamente Educacional**: **Nunca** indica, recomenda ou sugere ativos de investimento específicos.
-* **Focado e Transparente**: Recusa educadamente interações fora do escopo de finanças e admite quando não possui uma informação.
-* **Direto e Sucinto**: Limita suas respostas a no máximo 3 parágrafos, sempre confirmando se o cliente compreendeu a explicação ao final.
+## 1.2. Público-Alvo e Casos de Uso
+O assistente foi desenhado para atender a três perfis funcionais principais:
+1. **Iniciantes em Organização Financeira**: Utilizadores com dificuldades na estruturação do orçamento familiar, criação de hábitos de poupança e montagem da reserva de emergência.
+2. **Investidores de Primeira Viagem**: Pessoas que mantêm capitais em opções de baixíssimo rendimento (ex.: Caderneta de Poupança) por receio da complexidade de alternativas de Renda Fixa e Títulos Públicos.
+3. **Planeadores de Longo Prazo**: Indivíduos focados no alcance de metas específicas (compra de imóvel, transição de carreira, reforma) que necessitam de simulações conceituais claras.
+
+## 1.3. Matriz de Comportamento e Diretrizes Operacionais
+
+```text
+┌────────────────────────────────────────────────────────────────────────────────────────┐
+│                                 MATRIZ DE COMPORTAMENTO                                │
+├───────────────────────────────┬────────────────────────────────────────────────────────┤
+│ 🟢 DIRETRIZES OBRIGATÓRIAS     │ 🔴 PROIBIÇÕES RÍGIDAS (GUARDRAILS)                     │
+├───────────────────────────────┼────────────────────────────────────────────────────────┤
+│ • Linguagem humanizada e leiga│ • Venda ou indicação direta de investimentos           │
+│ • Uso do contexto do cliente  │ • Emitir pareceres de investimento ou alocação         │
+│ • Encerramento com checagem   │ • Respostas longas (limite estrito de 3 parágrafos)    │
+│ • Tom empático e sem julgamento│ • Extrapolação de escopo para temas não financeiros   │
+└───────────────────────────────┴────────────────────────────────────────────────────────┘
