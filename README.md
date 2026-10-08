@@ -6,20 +6,6 @@
 
 O **Prosperar** é um assistente virtual interativo e inteligente focado **exclusivamente em Educação Financeira Pessoal**. Ele combina modelos de linguagem (LLMs via Ollama) com a análise de dados financeiros do usuário para transformar conceitos complexos do mercado financeiro em lições simples, didáticas e personalizadas.
 
----
-
-## 📌 Sumário
-- [Visão Geral e Objetivos](#-visão-geral-e-objetivos)
-- [Principais Funcionalidades](#-principais-funcionalidades)
-- [Arquitetura e Estrutura do Projeto](#-arquitetura-e-estrutura-do-projeto)
-- [Regras Rígidas do Agente (System Prompt)](#-regras-rígidas-do-agente-system-prompt)
-- [Base de Conhecimento e Dados](#-base-de-conhecimento-e-dados)
-- [Pré-requisitos e Instalação](#-pré-requisitos-e-instalação)
-- [Como Executar a Aplicação](#-como-executar-a-aplicação)
-- [Avaliação de Desempenho e Métricas](#-avaliação-de-desempenho-e-métricas)
-- [Pitch do Projeto](#-pitch-do-projeto)
-
----
 
 ## 🎯 Visão Geral e Objetivos
 
