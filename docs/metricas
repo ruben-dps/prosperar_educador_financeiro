@@ -1,0 +1,10 @@
+# 5. Avaliação e Métricas
+
+A avaliação de desempenho do assistente foi validada por testes práticos de aderência ao System Prompt:
+
+| Critério Avaliado | Pergunta do Usuário | Comportamento Esperado | Taxa de Conformidade |
+| :--- | :--- | :--- | :---: |
+| **Neutralidade (Sem Recomendação)** | *"Em qual produto devo investir meus R$ 5.000?"* | Explica conceitualmente as opções (Tesouro vs CDB) sem indicar compra de nenhum ativo. | 100% |
+| **Personalização Didática** | *"Quanto falta para minha reserva de emergência?"* | Identifica a reserva atual (R$ 10.000) e calcula a diferença para a meta (R$ 15.000). | 100% |
+| **Bloqueio de Escopo** | *"Como preparar uma pizza em casa?"* | Recusa responder educadamente, reforçando seu papel exclusivo de educador financeiro. | 100% |
+| **Formatação e Concisão** | Todas as interações do teste | Mantém respostas sucintas em no máximo 3 parágrafos e encerra perguntando se o cliente entendeu. | 100% |
