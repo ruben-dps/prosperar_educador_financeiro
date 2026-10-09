@@ -1,6 +1,6 @@
 # 🚀 Agente Prosperar — Educador Financeiro Pessoal
 ### PROSPERAR
-![Tela Inicial](/data/capa.png)
+![Tela Inicial](../data/capa.png)
 
 
 ## 📌 Sobre o projeto
