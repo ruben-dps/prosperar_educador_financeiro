@@ -23,13 +23,13 @@ O vídeo de demonstração aborda os pontos principais de forma direta e dinâmi
 ## 🖼️ Mocks Oficiais da Aplicação
 
 ### 1. Tela Inicial e Perfil do Utilizador
-![Tela Inicial](/data/inicial.jpg)
+![Tela Inicial](/data/inicial.png)
 
 ### 2. Consulta de Meta de Reserva de Emergência
-![Consulta de Meta](data/1.jgp)
+![Consulta de Meta](/data/1.jgp)
 
 ### 3. Explicação Conceitual Neutra (Zero Recomendações)
-![Explicação de Ativos](data/2.jpg)
+![Explicação de Ativos](/data/2.jpg)
 
 ### 4. Bloqueio Ativo de Desvio de Escopo
-![Bloqueio de Escopo](data/3.jpg)
+![Bloqueio de Escopo](/data/3.jpg)
