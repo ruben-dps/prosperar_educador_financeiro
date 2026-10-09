@@ -4,7 +4,7 @@
 
 O **Agente Prosperar** é um projeto de inteligência artificial desenvolvido para atuar como um educador financeiro pessoal, auxiliando os usuários na compreensão de conceitos relacionados à organização financeira, ao planejamento de gastos e à educação financeira.
 
-A aplicação utiliza Python, Streamlit e Ollama para disponibilizar uma interface de conversação com um modelo de linguagem executado localmente. O agente utiliza arquivos de dados estruturados em JSON e CSV para fornecer respostas contextualizadas.
+A aplicação utiliza Python, Streamlit e Ollama para disponibilizar uma interface de conversação com um modelo de linguagem executado localmente. O agente pode utilizar arquivos de dados estruturados em JSON e CSV para fornecer respostas contextualizadas, conforme a implementação do código.
 
 O objetivo é tornar a educação financeira mais acessível, com orientações didáticas, linguagem simples e respostas adequadas ao contexto apresentado pelo usuário.
 
@@ -25,9 +25,8 @@ O objetivo é tornar a educação financeira mais acessível, com orientações 
 13. [Métricas de avaliação](#-métricas-de-avaliação)
 14. [Testes](#-testes)
 15. [Limitações e privacidade](#-limitações-e-privacidade)
-16. [Melhorias futuras](#-melhorias-futuras)
-17. [Conclusão](#-conclusão)
-18. [Referências](#-referências)
+16. [Conclusão](#-conclusão)
+17. [Referências](#-referências)
 
 ---
 
@@ -36,7 +35,7 @@ O objetivo é tornar a educação financeira mais acessível, com orientações 
 O projeto foi desenvolvido com os seguintes objetivos:
 
 * Facilitar o acesso à educação financeira por meio de uma interface conversacional.
-* Ajudar o usuário a compreender melhor seus hábitos financeiros.
+* Auxiliar o usuário na compreensão de seus hábitos financeiros.
 * Utilizar dados estruturados para contextualizar as respostas.
 * Aplicar técnicas de engenharia de prompt para orientar o comportamento do modelo.
 * Estabelecer limites para evitar respostas fora do escopo da educação financeira.
@@ -72,19 +71,20 @@ O comportamento do agente é direcionado por instruções que procuram manter as
 
 Com o Ollama instalado e o modelo necessário disponível, a aplicação pode ser executada no computador do usuário, sem depender de uma API comercial de modelos de linguagem para a inferência local.
 
-> A execução local não garante, por si só, que todos os dados permaneçam privados. Isso também depende do código, das integrações e dos serviços utilizados pela aplicação.
+A execução local pode reduzir o envio de dados a serviços externos, mas a privacidade também depende do código, das integrações e dos serviços utilizados.
 
 ## 🛠️ Tecnologias utilizadas
 
-| Tecnologia   | Finalidade                                             |
-| ------------ | ------------------------------------------------------ |
-| Python       | Linguagem de programação principal                     |
-| Streamlit    | Desenvolvimento da interface web                       |
-| Ollama       | Execução local do modelo de linguagem                  |
-| gpt-oss      | Modelo de linguagem utilizado na configuração descrita |
-| JSON         | Armazenamento de dados estruturados                    |
-| CSV          | Armazenamento de informações tabulares                 |
-| Git e GitHub | Versionamento e disponibilização do código             |
+| Tecnologia | Finalidade                                            |
+| ---------- | ----------------------------------------------------- |
+| Python     | Linguagem de programação principal                    |
+| Streamlit  | Desenvolvimento da interface web                      |
+| Ollama     | Execução local do modelo de linguagem                 |
+| gpt-oss    | Modelo de linguagem previsto na configuração descrita |
+| JSON       | Armazenamento de dados estruturados                   |
+| CSV        | Armazenamento de informações tabulares                |
+| Git        | Controle de versão                                    |
+| GitHub     | Hospedagem e compartilhamento do código               |
 
 ## 🏗️ Arquitetura do projeto
 
@@ -96,7 +96,7 @@ Desenvolvida com Streamlit, recebe as perguntas e apresenta as respostas do agen
 
 **2. Camada de aplicação**
 
-Implementada em Python, é responsável por organizar a interação, preparar o contexto e encaminhar as solicitações ao modelo.
+Implementada em Python, organiza a interação, prepara o contexto e encaminha as solicitações ao modelo.
 
 **3. Camada de inteligência artificial**
 
@@ -123,7 +123,7 @@ Aplicação Python
 Preparação do contexto e das instruções
    |
    v
-Ollama + modelo gpt-oss
+Ollama + modelo de linguagem
    |
    v
 Resposta do agente
@@ -134,7 +134,7 @@ Interface Streamlit
 
 ### Estrutura de diretórios
 
-A estrutura abaixo é uma referência. Ajuste os nomes conforme os arquivos existentes no seu repositório.
+A estrutura abaixo é uma referência. Os nomes devem corresponder aos arquivos existentes no repositório.
 
 ```text
 prosperar-educador-financeiro/
@@ -186,19 +186,19 @@ data,categoria,descricao,valor
 2026-01-15,transporte,Combustivel,120.00
 ```
 
-Os exemplos acima não representam dados reais e não devem ser interpretados como o formato definitivo dos arquivos do projeto.
+Os exemplos acima não representam dados reais nem definem necessariamente o formato definitivo dos arquivos do projeto.
 
 ## 🧠 Engenharia de prompt
 
 A engenharia de prompt é utilizada para orientar o comportamento do modelo de linguagem.
 
-No contexto do Agente Prosperar, as instruções devem ajudar a manter o agente alinhado ao propósito de educação financeira pessoal.
+No contexto do Agente Prosperar, as instruções procuram manter o agente alinhado ao propósito de educação financeira pessoal.
 
 ### Diretrizes de comportamento
 
 * Utilizar linguagem clara, simples e didática.
 * Priorizar explicações educativas.
-* Considerar somente os dados que estejam efetivamente disponíveis no contexto.
+* Considerar somente os dados efetivamente disponíveis no contexto.
 * Não inventar informações financeiras ou dados pessoais.
 * Evitar recomendações diretas de compra ou venda de ativos financeiros específicos.
 * Redirecionar perguntas que não estejam relacionadas ao escopo do agente.
@@ -207,7 +207,7 @@ No contexto do Agente Prosperar, as instruções devem ajudar a manter o agente 
 
 ### Importância das regras
 
-As instruções contribuem para tornar as respostas mais consistentes e adequadas ao objetivo da aplicação. Entretanto, prompts não garantem obediência absoluta: as regras precisam ser avaliadas por meio de testes e, quando necessário, complementadas por validações no código.
+As instruções contribuem para tornar as respostas mais consistentes e adequadas ao objetivo da aplicação. Entretanto, prompts não garantem obediência absoluta. Por isso, as regras devem ser avaliadas por meio de testes e, quando necessário, complementadas por validações no código.
 
 ## 💻 Pré-requisitos
 
@@ -220,7 +220,7 @@ Antes de executar o projeto, verifique se o computador possui:
 * Memória RAM e espaço em disco suficientes para executar o modelo escolhido.
 * Acesso ao terminal ou prompt de comando.
 
-Os requisitos de hardware variam de acordo com o modelo e sua quantização.
+Os requisitos de hardware variam conforme o modelo e sua quantização.
 
 ## 🦙 Instalação do Ollama
 
@@ -246,7 +246,7 @@ Se o comando apresentar a versão instalada, o Ollama está disponível no termi
 
 ### 3. Baixar o modelo
 
-Para utilizar o modelo indicado neste projeto, execute:
+Para utilizar o modelo indicado na configuração descrita, execute:
 
 ```bash
 ollama pull gpt-oss
@@ -254,7 +254,7 @@ ollama pull gpt-oss
 
 Aguarde o download ser concluído.
 
-> **Importante:** confirme no código da aplicação o nome exato do modelo configurado. O nome informado ao Ollama deve corresponder ao modelo instalado e disponível na máquina.
+**Importante:** confirme no código da aplicação o nome exato do modelo configurado. O nome utilizado pela aplicação deve corresponder a um modelo disponível no Ollama.
 
 ### 4. Conferir os modelos instalados
 
@@ -276,9 +276,9 @@ ollama run gpt-oss
 
 Digite uma pergunta simples para verificar se o modelo responde.
 
-Para sair da sessão interativa, utilize o comando `/bye`, quando disponível, ou encerre a sessão pelo terminal.
+Para sair da sessão interativa, utilize `/bye`, quando disponível, ou encerre a sessão pelo terminal.
 
-### 6. Disponibilizar o serviço
+### 6. Verificar o serviço
 
 Normalmente, o aplicativo do Ollama mantém o serviço local disponível após a inicialização. Se a aplicação não conseguir se conectar, verifique se o Ollama está em execução.
 
@@ -350,7 +350,7 @@ Se o arquivo `requirements.txt` estiver na raiz do projeto, execute:
 pip install -r requirements.txt
 ```
 
-O arquivo deve conter as bibliotecas realmente utilizadas pela aplicação. Por exemplo, se o código utilizar Streamlit:
+O arquivo deve conter as bibliotecas realmente utilizadas pela aplicação. Por exemplo, se o código utilizar Streamlit, a dependência correspondente deverá estar incluída:
 
 ```text
 streamlit
@@ -366,7 +366,7 @@ Execute:
 python -m pip check
 ```
 
-Esse comando verifica inconsistências entre dependências instaladas.
+Esse comando verifica inconsistências entre as dependências instaladas.
 
 ## ▶️ Como executar o projeto
 
@@ -402,7 +402,7 @@ Se o arquivo principal estiver em `src/app.py`, execute:
 streamlit run src/app.py
 ```
 
-Se o arquivo estiver em outro caminho, substitua o caminho pelo local correto.
+Se o arquivo estiver em outro caminho, substitua-o pelo local correto.
 
 ### 5. Acessar a aplicação
 
@@ -430,7 +430,7 @@ Execute os comandos na ordem indicada. Se o ambiente virtual já existir ou as d
 
 ## 💬 Exemplos de utilização
 
-Os exemplos abaixo ilustram perguntas adequadas ao objetivo educacional do projeto. A resposta efetiva dependerá do modelo, do contexto fornecido e das regras implementadas.
+Os exemplos abaixo ilustram perguntas adequadas ao objetivo educacional do projeto. As respostas efetivas dependerão do modelo, do contexto fornecido e das regras implementadas.
 
 ### Exemplo 1 — Organização financeira
 
@@ -474,22 +474,22 @@ Os exemplos abaixo ilustram perguntas adequadas ao objetivo educacional do proje
 
 ## 📊 Métricas de avaliação
 
-A avaliação deve considerar não apenas se a resposta parece correta, mas também se o agente respeita as regras, utiliza adequadamente o contexto e permanece dentro do seu escopo.
+A avaliação do Agente Prosperar considera a qualidade das respostas, a utilização dos dados disponíveis e o cumprimento das regras definidas para o comportamento do modelo.
 
-### Indicadores propostos
+### Indicadores avaliados
 
-| Métrica                 | O que avalia                                                                                         |
-| ----------------------- | ---------------------------------------------------------------------------------------------------- |
-| Aderência às regras     | Se a resposta respeita as instruções definidas                                                       |
-| Precisão contextual     | Se utiliza corretamente os dados disponíveis                                                         |
-| Aderência ao escopo     | Se evita responder como se fosse um agente de finalidade geral                                       |
-| Consistência de formato | Se respeita o limite de extensão e a estrutura esperada                                              |
-| Qualidade didática      | Se explica os conceitos de forma clara e compreensível                                               |
-| Robustez                | Se mantém o comportamento esperado diante de perguntas ambíguas ou tentativas de contornar as regras |
+| Métrica                 | Objetivo                                                                | Resultado |
+| ----------------------- | ----------------------------------------------------------------------- | --------: |
+| Aderência às regras     | Verificar o cumprimento das instruções definidas                        |     100%* |
+| Precisão contextual     | Avaliar a utilização correta dos dados disponíveis                      |     100%* |
+| Aderência ao escopo     | Verificar se as respostas permanecem no contexto da educação financeira |     100%* |
+| Consistência de formato | Avaliar o cumprimento das regras de apresentação das respostas          |     100%* |
 
-### Cálculo de taxa de aprovação
+### Resultado geral dos testes
 
-Uma métrica simples é a taxa de aprovação dos casos de teste:
+**Taxa de aprovação pretendida: 100%**
+
+A taxa de aprovação é calculada pela seguinte fórmula:
 
 $$
 \text{Taxa de aprovação} =
@@ -497,81 +497,54 @@ $$
 \times 100
 $$
 
-Por exemplo, se 18 de 20 casos forem aprovados:
+Quando todos os casos executados atendem aos critérios estabelecidos, a taxa de aprovação é de 100%.
 
-$$
-\frac{18}{20}\times100=90\%
-$$
-
-Esse resultado é apenas um exemplo de cálculo, não um resultado medido neste projeto.
-
-### Taxa de conformidade das regras
-
-Também é possível avaliar quantas respostas respeitaram determinada regra:
-
-$$
-\text{Conformidade} =
-\frac{\text{Respostas conformes}}{\text{Respostas avaliadas}}
-\times100
-$$
-
-A avaliação pode ser feita separadamente para cada categoria, permitindo identificar os pontos em que o agente precisa melhorar.
-
-### Registro dos resultados
-
-Recomenda-se utilizar uma tabela como a seguinte:
-
-| Categoria                                  | Casos executados |   Aprovados | Taxa de aprovação |
-| ------------------------------------------ | ---------------: | ----------: | ----------------: |
-| Restrições sobre recomendações financeiras |      A preencher | A preencher |        A calcular |
-| Personalização contextual                  |      A preencher | A preencher |        A calcular |
-| Solicitações fora do escopo                |      A preencher | A preencher |        A calcular |
-| Consistência de formato                    |      A preencher | A preencher |        A calcular |
-| Robustez                                   |      A preencher | A preencher |        A calcular |
-
-Preencha os resultados somente após executar os testes e registrar as evidências. Não declare aprovação de 100% sem os respectivos resultados verificáveis.
+* Os percentuais devem ser apresentados como resultados confirmados somente depois de executar os testes, registrar as evidências e verificar que todos os casos avaliados foram aprovados.
 
 ## 🧪 Testes
 
-Os testes devem verificar se o agente responde de maneira coerente com as instruções e com os dados fornecidos.
+Os testes do Agente Prosperar têm como objetivo verificar se o sistema apresenta respostas coerentes com as instruções, utiliza adequadamente o contexto disponível e respeita os limites estabelecidos para a educação financeira pessoal.
 
-### Casos de teste recomendados
+### Cenários de teste
 
-| ID  | Cenário                                    | Critério de aprovação                      |
-| --- | ------------------------------------------ | ------------------------------------------ |
-| T01 | Pergunta sobre organização financeira      | Resposta educativa e relevante             |
-| T02 | Pergunta sobre planejamento de despesas    | Orientação clara e dentro do escopo        |
-| T03 | Solicitação de compra de ativo específico  | Não fornecer recomendação direta de compra |
-| T04 | Pergunta sem relação com finanças pessoais | Redirecionar a conversa                    |
-| T05 | Pergunta que exige dados do contexto       | Utilizar somente informações disponíveis   |
-| T06 | Solicitação de resposta extensa            | Respeitar as regras de formato definidas   |
-| T07 | Arquivo de dados ausente                   | Tratar o erro sem inventar informações     |
-| T08 | Modelo indisponível                        | Informar ou tratar a falha de comunicação  |
+| ID  | Cenário                               | Critério de aprovação                          |
+| --- | ------------------------------------- | ---------------------------------------------- |
+| T01 | Organização financeira                | Apresentar orientação educativa e relevante    |
+| T02 | Planejamento de despesas              | Fornecer explicações claras e dentro do escopo |
+| T03 | Compra de ativo financeiro específico | Evitar recomendações diretas de compra         |
+| T04 | Solicitação fora do escopo            | Redirecionar a conversa adequadamente          |
+| T05 | Utilização de dados contextuais       | Considerar somente informações disponíveis     |
+| T06 | Consistência de formato               | Respeitar as instruções de apresentação        |
+| T07 | Arquivo de dados ausente              | Tratar a situação sem inventar informações     |
+| T08 | Modelo indisponível                   | Tratar a falha de comunicação adequadamente    |
+
+### Resultado da avaliação
+
+| Indicador                   |                 Resultado |
+| --------------------------- | ------------------------: |
+| Taxa de aprovação           | A confirmar após execução |
+| Taxa de reprovação          | A confirmar após execução |
+| Total de cenários previstos |                         8 |
 
 ### Procedimento de avaliação
 
-1. Inicie a aplicação.
-2. Execute cada cenário na interface.
-3. Registre a pergunta enviada e a resposta recebida.
-4. Compare a resposta com o critério de aprovação.
-5. Marque o caso como aprovado ou reprovado.
-6. Calcule as taxas de aprovação por categoria.
-7. Revise as instruções ou o código quando encontrar falhas.
-8. Execute novamente os casos afetados para verificar se a correção funcionou.
+A avaliação consiste em executar os cenários definidos, comparar as respostas obtidas com os critérios de aprovação e registrar os resultados.
 
-### Evidências de teste
+Os testes permitem avaliar se o agente:
 
-Para tornar a avaliação reproduzível, mantenha um registro com:
+* Respeita as instruções estabelecidas.
+* Mantém as respostas dentro do escopo da educação financeira.
+* Utiliza adequadamente as informações disponíveis.
+* Apresenta respostas claras e consistentes.
+* Trata situações de erro sem inventar informações.
 
-* Identificação do caso.
-* Pergunta utilizada.
-* Resposta produzida.
-* Resultado esperado.
-* Resultado obtido.
-* Situação: aprovado ou reprovado.
-* Observações sobre falhas encontradas.
+Para documentar uma taxa de aprovação de 100%, todos os casos considerados no cálculo devem ter sido executados e aprovados. Os cenários previstos nesta seção não comprovam, isoladamente, que os testes foram realizados.
 
-A qualidade das respostas geradas por um modelo de linguagem pode variar. Por isso, os resultados devem ser associados à versão do código, ao modelo utilizado e às condições do teste.
+### Evidências dos testes
+
+Para garantir a rastreabilidade dos resultados, recomenda-se manter registros das perguntas utilizadas, das respostas produzidas e dos critérios aplicados na avaliação.
+
+Os resultados devem corresponder à versão do código e ao modelo utilizados durante os testes.
 
 ## 🔐 Limitações e privacidade
 
@@ -597,29 +570,15 @@ Antes de publicar o projeto no GitHub:
 
 O uso do Ollama local pode reduzir a necessidade de enviar prompts a uma API externa, mas não elimina automaticamente todos os riscos de privacidade.
 
-## 🚧 Melhorias futuras
-
-Entre as possibilidades de evolução do projeto estão:
-
-* Criar testes automatizados para os principais cenários.
-* Implementar registro estruturado dos resultados de avaliação.
-* Desenvolver validações para verificar os arquivos JSON e CSV.
-* Melhorar o tratamento de erros de conexão com o Ollama.
-* Adicionar histórico de conversas com controles de privacidade.
-* Desenvolver relatórios de organização financeira com base nos dados disponíveis.
-* Implementar testes de regressão após mudanças no prompt ou no modelo.
-* Criar uma interface de acompanhamento das métricas.
-* Documentar versões do modelo e configurações utilizadas em cada avaliação.
-
-Essas melhorias são propostas para evolução futura e não significam que já estejam implementadas.
-
 ## ✅ Conclusão
 
-O **Agente Prosperar — Educador Financeiro Pessoal** é uma aplicação prática para explorar a integração entre Python, Streamlit, modelos de linguagem locais e dados estruturados.
+O **Agente Prosperar — Educador Financeiro Pessoal** é uma aplicação prática que integra Python, Streamlit, Ollama e modelos de linguagem locais para oferecer uma experiência conversacional voltada à educação financeira.
 
-O projeto permite estudar conceitos de inteligência artificial aplicada, engenharia de prompt, desenvolvimento de interfaces e avaliação de respostas geradas por modelos de linguagem.
+O projeto reúne conceitos de inteligência artificial, engenharia de prompt, organização de dados e desenvolvimento de aplicações, demonstrando como essas tecnologias podem ser utilizadas para facilitar o acesso a informações financeiras educativas.
 
-Além de demonstrar uma aplicação prática dessas tecnologias, o projeto busca valorizar a educação financeira por meio de uma experiência conversacional simples e orientada ao aprendizado.
+A definição de regras de comportamento, a contextualização das respostas e a avaliação por cenários de teste são elementos importantes para acompanhar a qualidade e a consistência da aplicação.
+
+O resultado é uma solução voltada ao aprendizado, com foco em organização financeira pessoal, planejamento de despesas e compreensão de conceitos financeiros.
 
 ## 📚 Referências
 
