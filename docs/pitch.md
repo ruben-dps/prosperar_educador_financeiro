@@ -36,4 +36,4 @@ O vídeo de demonstração aborda os pontos principais de forma direta e dinâmi
 
 
 ### 5. Vídeo do PROSPERAR
-<video src="/data/prosperar_video.mp4" controls width="100%"></video>
+<video src="../data/prosperar_video.mp4" controls width="100%"></video>
