@@ -24,9 +24,8 @@ O objetivo é tornar a educação financeira mais acessível, com orientações 
 12. [Exemplos de utilização](#-exemplos-de-utilização)
 13. [Métricas de avaliação](#-métricas-de-avaliação)
 14. [Testes](#-testes)
-15. [Limitações e privacidade](#-limitações-e-privacidade)
-16. [Conclusão](#-conclusão)
-17. [Referências](#-referências)
+15. [Conclusão](#-conclusão)
+16. [Referências](#-referências)
 
 ---
 
@@ -546,29 +545,10 @@ Para garantir a rastreabilidade dos resultados, recomenda-se manter registros da
 
 Os resultados devem corresponder à versão do código e ao modelo utilizados durante os testes.
 
-## 🔐 Limitações e privacidade
 
-### Limitações
 
-* O modelo pode gerar informações incorretas ou imprecisas.
-* As respostas dependem da qualidade dos dados e das instruções.
-* Os dados disponíveis podem estar incompletos ou desatualizados.
-* A execução local exige recursos computacionais compatíveis com o modelo.
-* A engenharia de prompt reduz alguns riscos de comportamento inadequado, mas não garante a eliminação de erros.
-* O agente tem finalidade educacional e não substitui aconselhamento financeiro profissional individualizado.
 
-### Privacidade
 
-Antes de publicar o projeto no GitHub:
-
-* Remova dados pessoais reais dos arquivos JSON e CSV.
-* Não publique senhas, tokens, chaves de API ou outras credenciais.
-* Utilize dados fictícios ou anonimizados nos exemplos.
-* Verifique se os registros de atendimento contêm informações identificáveis.
-* Inclua no `.gitignore` os arquivos locais ou sensíveis que não devem ser versionados.
-* Confira se o código transmite informações a serviços externos.
-
-O uso do Ollama local pode reduzir a necessidade de enviar prompts a uma API externa, mas não elimina automaticamente todos os riscos de privacidade.
 
 ## ✅ Conclusão
 
