@@ -26,7 +26,7 @@ O vídeo de demonstração aborda os pontos principais de forma direta e dinâmi
 ![Tela Inicial](/data/inicial.png)
 
 ### 2. Consulta de Meta de Reserva de Emergência
-![Consulta de Meta](/data/1.jgp)
+![Consulta de Meta](/data/1.jpg)
 
 ### 3. Explicação Conceitual Neutra (Zero Recomendações)
 ![Explicação de Ativos](/data/2.jpg)
